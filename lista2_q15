@@ -1,0 +1,65 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    Console.WriteLine ("Digite três valores:");
+    double a = double.Parse(Console.ReadLine());
+    double b = double.Parse(Console.ReadLine());
+    double c = double.Parse(Console.ReadLine());
+    double maior = 0 ;
+    double menor = 0 ;
+
+    if(a > b)
+    {
+      if(a > c)
+      {
+        maior = a ;
+      }
+    }
+
+    if(b > a )
+    {
+      if(b > c)
+      {
+        maior = b ;
+      }
+    }
+
+    if(c > a)
+    {
+      if(c > b)
+      {
+        maior = c ;
+      }
+    }
+
+    if(a < b)
+    {
+      if(a < c)
+      {
+        menor = a ;
+      }
+    }
+
+    if(b < a )
+    {
+      if(b < c)
+      {
+        menor = b ;
+      }
+    }
+
+    if(c < a)
+    {
+      if(c < b)
+      {
+        menor = c ;
+      }
+    }
+
+    double somamm = maior + menor ;
+    double meio = (a + b + c) - somamm ;
+    Console.WriteLine($"{menor}, {meio}, {maior}");
+
+  }
+}  
