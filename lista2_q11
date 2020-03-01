@@ -1,0 +1,71 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    Console.WriteLine ("Digite uma data no formato dd/mm/aaaa");
+    string data = Console.ReadLine();
+  
+    string[] data2 = data.Split('/');
+      int dia = int.Parse(data2[0]);
+      int mes = int.Parse(data2[1]);
+      int ano = int.Parse(data2[2]);
+
+    switch (mes)
+    {
+      case 1:
+         string NomeMes = "Janeiro";
+         Console.WriteLine($"A data é {dia} de {NomeMes} de {ano}");
+      break;
+      case 2:
+         NomeMes = "Fevereiro";
+         Console.WriteLine($"A data é {dia} de {NomeMes} de {ano}");
+      break;
+
+      case 3:
+         NomeMes = "Março";
+         Console.WriteLine($"A data é {dia} de {NomeMes} de {ano}");
+      break;
+      case 4:
+         NomeMes = "Abril";
+         Console.WriteLine($"A data é {dia} de {NomeMes} de {ano}");
+      break;
+
+      case 5:
+         NomeMes = "Maio";
+         Console.WriteLine($"A data é {dia} de {NomeMes} de {ano}");
+      break;
+
+      case 6:
+         NomeMes = "Junho";
+         Console.WriteLine($"A data é {dia} de {NomeMes} de {ano}");
+      break;
+      case 7:
+         NomeMes = "Julho";
+         Console.WriteLine($"A data é {dia} de {NomeMes} de {ano}");
+      break;
+      case 8:
+         NomeMes = "Agosto";
+         Console.WriteLine($"A data é {dia} de {NomeMes} de {ano}");
+      break;
+      case 9:
+         NomeMes = "Setembro";
+         Console.WriteLine($"A data é {dia} de {NomeMes} de {ano}");
+      break;
+      case 10:
+         NomeMes = "Outubro";
+         Console.WriteLine($"A data é {dia} de {NomeMes} de {ano}");
+      break;
+      case 11:
+         NomeMes = "Novembro";
+         Console.WriteLine($"A data é {dia} de {NomeMes} de {ano}");
+      break;
+      case 12:
+         NomeMes = "Dezembro";
+         Console.WriteLine($"A data é {dia} de {NomeMes} de {ano}");
+      break;
+      
+    }
+    
+
+  }
+}
