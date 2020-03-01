@@ -6,56 +6,16 @@ class MainClass {
     double a = double.Parse(Console.ReadLine());
     double b = double.Parse(Console.ReadLine());
     double c = double.Parse(Console.ReadLine());
-    double maior = 0 ;
-    double menor = 0 ;
 
-    if(a > b)
-    {
-      if(a > c)
-      {
-        maior = a ;
-      }
-    }
+    double maior = a;
+    if (a > maior) maior = a;
+    if (b > maior) maior = b;
+    if (c > maior) maior = c;
 
-    if(b > a )
-    {
-      if(b > c)
-      {
-        maior = b ;
-      }
-    }
-
-    if(c > a)
-    {
-      if(c > b)
-      {
-        maior = c ;
-      }
-    }
-
-    if(a < b)
-    {
-      if(a < c)
-      {
-        menor = a ;
-      }
-    }
-
-    if(b < a )
-    {
-      if(b < c)
-      {
-        menor = b ;
-      }
-    }
-
-    if(c < a)
-    {
-      if(c < b)
-      {
-        menor = c ;
-      }
-    }
+    double menor = a;
+    if (a < menor) menor = a;
+    if (b < menor) menor = b;
+    if (c < menor) menor = c;
 
     double somamm = maior + menor ;
     double meio = (a + b + c) - somamm ;
