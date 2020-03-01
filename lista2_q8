@@ -1,0 +1,111 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    Console.WriteLine ("Digite quatro valores inteiros");
+    int a = int.Parse(Console.ReadLine());
+    int b = int.Parse(Console.ReadLine());
+    int c = int.Parse(Console.ReadLine());
+    int d = int.Parse(Console.ReadLine());
+    int maior = 0 ;
+    int menor = 0 ;
+
+    if(a > b)
+    {
+      if(a > c)
+      {
+        if(a > d)
+        {
+          maior = a ;
+        }
+      }
+    }
+
+    if(b > a )
+    {
+      if(b > c)
+      {
+        if(b > d)
+        {
+          maior = b ;
+        }
+      }
+    }
+
+    if(c > a)
+    {
+      if(c > b)
+      {
+        if(c > d)
+        {
+          maior = c ;
+        }
+      }
+    }
+
+    if(d > a)
+    {
+      if(d > b)
+      {
+        if(d > c)
+        {
+          maior = d ;
+        }
+      }
+    }
+
+
+    if(a < b)
+    {
+      if(a < c)
+      {
+        if(a < d)
+        {
+          menor = a ;
+        }
+      }
+    }
+
+    if(b < a )
+    {
+      if(b < c)
+      {
+        if(b < d)
+        {
+          menor = a ;
+        }
+      }
+    }
+
+    if(c < a)
+    {
+      if(c < b)
+      {
+        if(a < d)
+        {
+          menor = a ;
+        }
+      }
+    }
+
+    if(d < a)
+    {
+      if(d < b)
+      {
+        if(d < c)
+        {
+          maior = d ;
+        }
+      }
+    }
+
+    int somatotal = a + b + c + d ;
+    int somamm = maior + menor ;
+    int somaseg = somatotal - somamm ;
+
+    Console.WriteLine($"Maior valor = {maior}");
+    Console.WriteLine($"Menor valor = {menor}");
+    Console.WriteLine($"A soma do segundo maior valor com o segundo menor = {somaseg} ");
+
+  }
+}  
