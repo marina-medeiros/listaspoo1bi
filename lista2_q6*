@@ -1,0 +1,59 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    Console.WriteLine ("Digite três valores inteiros");
+    int a = int.Parse(Console.ReadLine());
+    int b = int.Parse(Console.ReadLine());
+    int c = int.Parse(Console.ReadLine());
+    int maior = 0 ;
+    int menor = 0 ;
+
+    if(a > b)
+    {
+      if(a > c)
+      {
+        maior = a ;
+      }
+
+    if(b > a )
+    {
+      if(b > c)
+      {
+        maior = b ;
+      }
+
+    if(c > a)
+    {
+      if(c > b)
+      {
+        maior = c ;
+      }
+
+
+    if(a < b)
+    {
+      if(a < c)
+      {
+        menor = a ;
+      }
+
+    if(b < a )
+    {
+      if(b < c)
+      {
+        menor = b ;
+      }
+
+    if(c < a)
+    {
+      if(c < b)
+      {
+        menor = c ;
+      }
+
+    int soma = maior + menor ;
+    Console.WriteLine($"{soma}");
+
+  }
+}  
