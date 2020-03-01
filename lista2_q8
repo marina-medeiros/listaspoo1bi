@@ -7,97 +7,18 @@ class MainClass {
     int b = int.Parse(Console.ReadLine());
     int c = int.Parse(Console.ReadLine());
     int d = int.Parse(Console.ReadLine());
-    int maior = 0 ;
-    int menor = 0 ;
 
-    if(a > b)
-    {
-      if(a > c)
-      {
-        if(a > d)
-        {
-          maior = a ;
-        }
-      }
-    }
+    int maior = a;
+    if (a > maior) maior = a;
+    if (b > maior) maior = b;
+    if (c > maior) maior = c;
+    if (d > maior) maior = d;
 
-    if(b > a )
-    {
-      if(b > c)
-      {
-        if(b > d)
-        {
-          maior = b ;
-        }
-      }
-    }
-
-    if(c > a)
-    {
-      if(c > b)
-      {
-        if(c > d)
-        {
-          maior = c ;
-        }
-      }
-    }
-
-    if(d > a)
-    {
-      if(d > b)
-      {
-        if(d > c)
-        {
-          maior = d ;
-        }
-      }
-    }
-
-
-    if(a < b)
-    {
-      if(a < c)
-      {
-        if(a < d)
-        {
-          menor = a ;
-        }
-      }
-    }
-
-    if(b < a )
-    {
-      if(b < c)
-      {
-        if(b < d)
-        {
-          menor = a ;
-        }
-      }
-    }
-
-    if(c < a)
-    {
-      if(c < b)
-      {
-        if(a < d)
-        {
-          menor = a ;
-        }
-      }
-    }
-
-    if(d < a)
-    {
-      if(d < b)
-      {
-        if(d < c)
-        {
-          maior = d ;
-        }
-      }
-    }
+    int menor = a;
+    if (a < menor) menor = a;
+    if (b < menor) menor = b;
+    if (c < menor) menor = c;
+    if (d < maior) maior = d;
 
     int somatotal = a + b + c + d ;
     int somamm = maior + menor ;
