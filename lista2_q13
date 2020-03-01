@@ -1,0 +1,46 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    Console.WriteLine ("Digite dez valores inteiros");
+      string numeros = Console.ReadLine();
+      string[] nx = numeros.Split(' ');
+      int n1 = int.Parse(nx[0]);
+      int n2 = int.Parse(nx[1]);
+      int n3 = int.Parse(nx[2]);
+      int n4 = int.Parse(nx[3]);
+      int n5 = int.Parse(nx[4]);
+      int n6 = int.Parse(nx[5]);
+      int n7 = int.Parse(nx[6]);
+      int n8 = int.Parse(nx[7]);
+      int n9 = int.Parse(nx[8]);
+      int n10 = int.Parse(nx[9]);
+
+      int maior = n1;
+      if (n1 > maior) maior = n1;
+      if (n2 > maior) maior = n2;
+      if (n3 > maior) maior = n3;
+      if (n4 > maior) maior = n4;
+      if (n5 > maior) maior = n5;
+      if (n6 > maior) maior = n6;
+      if (n7 > maior) maior = n7;
+      if (n8 > maior) maior = n8;
+      if (n9 > maior) maior = n9;
+      if (n10 > maior) maior = n10;
+
+      int menor = n1;
+      if (n1 < menor) menor = n1;
+      if (n2 < menor) menor = n2;
+      if (n3 < menor) menor = n3;
+      if (n4 < menor) menor = n4;
+      if (n5 < menor) menor = n5;
+      if (n6 < menor) menor = n6;
+      if (n7 < menor) menor = n7;
+      if (n8 < menor) menor = n8;
+      if (n9 < menor) menor = n9;
+      if (n10 < menor) menor = n10;
+
+      Console.WriteLine($"O maior valor é {maior} e o menor é {menor}");
+    
+  }
+}
