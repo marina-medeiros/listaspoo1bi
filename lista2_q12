@@ -1,0 +1,40 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    Console.WriteLine ("Digite dois valores inteiros separados por um operador +, -, * ou /");
+    string num = Console.ReadLine() ;
+    int n1 = 0 ;
+    int n2 = 0 ;
+
+    if(num.IndexOf("+") != -1)
+    {
+      string[] s = num.Split("+");
+      n1 = int.Parse(s[0]);
+      n2 = int.Parse(s[1]);
+      Console.WriteLine($"O resultado da operação é {n1 + n2}");
+    }
+    if(num.IndexOf("-") != -1)
+    {
+      string[] s = num.Split("-");
+      n1 = int.Parse(s[0]);
+      n2 = int.Parse(s[1]);
+      Console.WriteLine($"O resultado da operação é {n1 - n2}");
+    }
+    if(num.IndexOf("*") != -1)
+    {
+      string[] s = num.Split("*");
+      n1 = int.Parse(s[0]);
+      n2 = int.Parse(s[1]);
+      Console.WriteLine($"O resultado da operação é {n1 * n2}");
+    }
+    if(num.IndexOf("/") != -1)
+    {
+      string[] s = num.Split("/");
+      n1 = int.Parse(s[0]);
+      n2 = int.Parse(s[1]);
+      Console.WriteLine($"O resultado da operação é {n1 / n2}");
+    }
+
+  }
+}
