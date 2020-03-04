@@ -1,0 +1,40 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+
+    int d = 32;
+    int m = 13;
+    int a = 2101;
+    int e = 0;
+
+    while(d > 31 || m > 12 || a > 2100 || a < 1900)
+    {
+          Console.WriteLine ("Digite uma data no formato dd/mm/aaaa");
+
+          string data = Console.ReadLine();
+
+          string[] s = data.Split("/");
+          d = int.Parse(s[0]);
+          m = int.Parse(s[1]);
+          a = int.Parse(s[2]);
+    }
+
+    if ( m == 01 || m == 03 || m == 05 || m == 07 || m == 08 || m == 10 || m == 12 && d > 31 )Console.WriteLine("A data informada não é válida");
+    else if (m == 01 || m == 03 || m == 05 || m == 07 || m == 08 || m == 10 || m == 12)Console.WriteLine("A data informada é válida");
+
+    if ( m == 04 || m == 06 || m == 09 || m == 11 && d > 30)Console.WriteLine("A data informada não é válida");
+    else if (m == 04 || m == 06 || m == 09 || m == 11)Console.WriteLine("A data informada é válida");
+
+    if ( m == 02 && d > 28 && (a % 4) == 0 ){
+      Console.WriteLine("A data informada não é válida");
+      e = 1;
+    }
+    else if ( m == 02 && e == 1) Console.WriteLine("A data informada é válida");
+
+    if (m == 02 && d > 29 && (a % 4) != 0 ){
+      Console.WriteLine("A data informada não é válida");
+    }
+    else if ( m == 02 && e == 0 ) Console.WriteLine("A data informada é válida");
+  }
+}
