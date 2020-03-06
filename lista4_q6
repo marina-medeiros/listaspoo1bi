@@ -1,0 +1,37 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    Console.WriteLine ("Informe o primeiro horário");
+    string ent1 = Console.ReadLine();
+    Console.WriteLine ("Informe o segundo horário");
+    string ent2 = Console.ReadLine();
+
+    string[] pri = ent1.Split(' ');
+    string horario1 = (pri[0]);
+    string pmam1 = (pri[1]);
+
+    string[] s = horario1.Split(':');
+    int h1 = int.Parse(s[0]);
+    int m1 = int.Parse(s[1]);
+
+    string[] seg = ent2.Split(' ');
+    string horario2 = (seg[0]);
+    string pmam2 = (seg[1]);
+
+    string[] s2 = horario2.Split(':');
+    int h2 = int.Parse(s2[0]);
+    int m2 = int.Parse(s2[1]);
+
+    string maior = " ";
+
+    if (pmam1 == "AM" && pmam2 == "PM") maior = ent2 ;
+    if (pmam1 == "PM" && pmam2 == "AM") maior = ent1 ;
+    if (pmam1 == pmam2 && h1 > h2) maior = ent1;
+    if (pmam1 == pmam2 && h1 < h2) maior = ent2;
+    if (pmam1 == pmam2 && h1 == h2 && m1 > m2) maior = ent1;
+    if (pmam1 == pmam2 && h1 == h2 && m1 < m2) maior = ent2;
+
+    Console.WriteLine($"O maior horário é {maior}");
+  }
+}
