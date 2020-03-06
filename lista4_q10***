@@ -1,0 +1,35 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    Console.WriteLine ("Informe o valor unitário do produto");
+    double valor = double.Parse(Console.ReadLine());
+    Console.WriteLine ("Informe a quantidade comprada");
+    int x = int.Parse(Console.ReadLine());
+    
+    double d1 = 0;
+    double d2 = 0;
+    double d3 = 0;
+    double descontos = 0;
+
+    if (x <= 10){
+      d1 = x * 0.95;
+      descontos = descontos + d1;
+    } 
+    if (x > 10 && x <= 50){
+      d1 = (10 * valor) * 0.95;
+      d2 = (x - 10) * valor * 0.90;
+      descontos = descontos + d1 + d2;
+    }
+    if (x > 50){
+      d1 = (10 * valor) * 0.95;
+      d2 = (40 * valor) * 0.90;
+      d3 = (x - 50) * valor * 0.80;
+      descontos = descontos + d1 + d2 + d3;
+    }
+
+    Console.WriteLine($"O total a ser pago é {descontos:0.00}");
+
+            
+  }
+}
