@@ -1,0 +1,16 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    Console.WriteLine("Escreva seu nome completo (2 ou 3 palavras");
+    string nome = Console.ReadLine();
+    
+    string[] s = nome.Split(" ");
+    string n1 = (s[0]);
+    string n2 = (s[1]);
+    
+    Console.WriteLine($"{n2}, {n1} ");
+    
+    
+  }
+}
