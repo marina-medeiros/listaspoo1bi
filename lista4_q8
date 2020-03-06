@@ -1,0 +1,14 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    Console.WriteLine ("Digite um horário");
+    string hora = Console.ReadLine();
+    string[] s = hora.Split(':');
+    int h = int.Parse(s[0]);
+    int m = int.Parse(s[1]);
+
+    if(h > 24 || m > 60)Console.WriteLine("O horário não é válido");
+    else Console.WriteLine("O horário é válido");
+  }
+}
