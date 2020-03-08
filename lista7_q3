@@ -1,0 +1,16 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    Console.WriteLine ("Digite a operação no formato op1+op2:");
+    string op = Console.ReadLine();
+    string[] s = op.Split('+');
+    int op1 = int.Parse(s[0]);
+    int op2 = int.Parse(s[1]);
+
+    int soma = op1 + op2;
+
+    Console.WriteLine($"{soma}");
+    
+  }
+}
