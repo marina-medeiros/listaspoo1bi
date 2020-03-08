@@ -1,0 +1,19 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    Console.WriteLine ("Digite o valor gasto com o combustível em reais:");
+    double valortotal = double.Parse(Console.ReadLine());
+    Console.WriteLine("Digite o valor do litro do combustível em reais:");
+    double valorlitro = double.Parse(Console.ReadLine());
+    Console.WriteLine("Digite a distância percorrida em quilômetros");
+    double kmtotais = double.Parse(Console.ReadLine());
+
+    double litros = valortotal / valorlitro;
+    double consumomedio = kmtotais /litros;
+    double gastokm = valorlitro / (kmtotais/litros) ;
+
+    Console.WriteLine($"O consumo médio é de {consumomedio:0.00} Km por litro");
+    Console.WriteLine($"O gasto por Km percorrido é R${gastokm:0.00}");
+  }
+}
