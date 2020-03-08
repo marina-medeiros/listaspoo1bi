@@ -1,0 +1,17 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    Console.WriteLine ("Digite três valores separados por vírgulas:");
+    string op = Console.ReadLine();
+    string[] s = op.Split(',');
+    int op1 = int.Parse(s[0]);
+    int op2 = int.Parse(s[1]);
+    int op3 = int.Parse(s[2]);
+
+    int prod = op1 * op2 * op3;
+
+    Console.WriteLine($"{prod}");
+    
+  }
+}
