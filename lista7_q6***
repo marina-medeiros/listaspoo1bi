@@ -1,0 +1,27 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    Console.WriteLine ("Digite a largura do ambiente em metros:");
+    double larga = double.Parse(Console.ReadLine());
+
+    Console.WriteLine("Digite o comprimento do ambiente em metros:");
+    double compa = double.Parse(Console.ReadLine());
+
+    Console.WriteLine("Digite a largura do revestimento em centímetros:");
+    int largr = int.Parse(Console.ReadLine());
+
+    Console.WriteLine("Digite o comprimento do revestimento em centímetros:");
+    int compr = int.Parse(Console.ReadLine());
+
+    Console.WriteLine("Digite o número de peças por caixa:");
+    int pc = int.Parse(Console.ReadLine());
+
+    double areatotal = larga * compa;
+    double arear = (largr * compr)/10000;
+    double revtotais = areatotal / arear;
+    double caixas = revtotais / pc;
+
+    Console.WriteLine($"São necessárias {caixas} caixas do revestimento.");
+  }
+}
