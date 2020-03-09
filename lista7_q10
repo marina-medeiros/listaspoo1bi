@@ -1,0 +1,20 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    Console.WriteLine ("Digite a cidade de origem:");
+    string c1 = Console.ReadLine();
+    Console.WriteLine ("Digite a cidade de destino:");
+    string c2 = Console.ReadLine();
+    Console.WriteLine ("Digite a distância percorrida em quilômetros:");
+    int km = int.Parse(Console.ReadLine());
+    Console.WriteLine ("Digite a velocidade média em km/h:");
+    int vel = int.Parse(Console.ReadLine());
+
+    int horas = km / vel;
+    double resto = km % vel;
+    double min = (resto / vel) * 60;
+
+    Console.WriteLine($"O tempo estimado de viagem entre {c1} e {c2} é de {horas}:{min:0}");
+  }
+}
