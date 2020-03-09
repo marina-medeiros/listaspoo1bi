@@ -1,0 +1,26 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    Console.WriteLine ("Informe a placa do carro:");
+    string placa = Console.ReadLine();
+    char numero = placa[1];
+    
+    if (numero = "1" || numero = "2"){
+    Console.WriteLine($"O IPVA deverá ser pago em Fevereiro");
+    }
+    if (numero == 3 || numero == 4){
+    Console.WriteLine($"O IPVA deverá ser pago em Março");
+    }
+    if (numero == 5 || numero == 6){
+    Console.WriteLine($"O IPVA deverá ser pago em Abril");
+    }
+    if (numero == 7 || numero == 8){
+    Console.WriteLine($"O IPVA deverá ser pago em Maio");
+    }
+    if (numero == 9 || numero == 0){
+    Console.WriteLine($"O IPVA deverá ser pago em Junho");
+    }
+
+  }
+}
