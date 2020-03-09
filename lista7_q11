@@ -1,0 +1,26 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    Console.WriteLine ("Digite suas notas");
+    int n1 = int.Parse(Console.ReadLine());
+    int n2 = int.Parse(Console.ReadLine());
+    int n3 = int.Parse(Console.ReadLine());
+    int n4 = int.Parse(Console.ReadLine());
+
+    int pt = (n1 * 2) + (n2 * 2) + (n3 * 3) + (n4 * 3);
+    double media = pt / 10;
+
+    Console.WriteLine($"Media = {media}");
+    if (media >= 60 ) Console.WriteLine("Aprovado");
+    if (media < 60){
+      Console.WriteLine("Reprovado");
+      Console.WriteLine("Digite a nota da prova final");
+      int rec = int.Parse(Console.ReadLine());
+      double media2 = (rec + media) / 2;
+      Console.WriteLine($"Media final = {media2}");
+        if (media2 >= 60) Console.WriteLine("Aprovado");
+          else Console.WriteLine("Reprovado");
+    }
+  }
+}
