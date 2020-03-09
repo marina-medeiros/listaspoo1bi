@@ -1,0 +1,16 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {;
+    double a = 5000000;
+    double b = 7000000;
+    int c = 0;
+
+    while (a < b){
+      a += a * 0.03;
+      b += b * 0.02;
+      c = c + 1;
+    }
+    Console.WriteLine($"{c}");
+  }
+}
