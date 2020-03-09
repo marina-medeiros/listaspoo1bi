@@ -9,19 +9,19 @@ class MainClass {
     double compa = double.Parse(Console.ReadLine());
 
     Console.WriteLine("Digite a largura do revestimento em centímetros:");
-    int largr = int.Parse(Console.ReadLine());
+    double largr = double.Parse(Console.ReadLine());
 
     Console.WriteLine("Digite o comprimento do revestimento em centímetros:");
-    int compr = int.Parse(Console.ReadLine());
+    double compr = double.Parse(Console.ReadLine());
 
     Console.WriteLine("Digite o número de peças por caixa:");
-    int pc = int.Parse(Console.ReadLine());
+    double pc = double.Parse(Console.ReadLine());
 
     double areatotal = larga * compa;
     double arear = (largr * compr)/10000;
     double revtotais = areatotal / arear;
     double caixas = revtotais / pc;
 
-    Console.WriteLine($"São necessárias {caixas} caixas do revestimento.");
+    Console.WriteLine($"São necessárias {caixas:0.0} caixas do revestimento.");
   }
 }
