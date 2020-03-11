@@ -1,0 +1,17 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    int a = 1;
+    int b = 2;
+    int c = -3;
+    while (c >= -30){
+      Console.WriteLine($"{a}");
+      Console.WriteLine($"{b}");
+      Console.WriteLine($"{c}");
+      a = a + 3;
+      b = b + 3;
+      c = c - 3;
+    }
+  }
+}
