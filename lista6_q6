@@ -1,0 +1,20 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    int a = 1;
+    int b = 2;
+    int c = 3;
+    int x = 6;
+    while (x <= 87){
+      Console.WriteLine($"{a}");
+      Console.WriteLine($"{b}");
+      Console.WriteLine($"{c}");
+      Console.WriteLine($"{x}");
+      a = a + 3;
+      b = b + 3;
+      c = c + 3;
+      x = a + b + c;
+    }
+  }
+}
