@@ -1,0 +1,14 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    Console.WriteLine ("Digite uma frase");
+    string frase = Console.ReadLine();
+    int n = frase.Length;
+    int a = 0;
+    while(a < n){
+      a++;
+      Console.WriteLine($"{a} - {frase}");
+    }
+  }
+}
