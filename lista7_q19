@@ -1,0 +1,55 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    Console.WriteLine ("escreva a relação de votos");
+    string va = Console.ReadLine();
+    string[] a = va.Split('-');
+    double vta = double.Parse(a[0]);
+    string stga = a[1];
+
+    string vb = Console.ReadLine();
+    string[] b = vb.Split('-');
+    double vtb = double.Parse(b[0]);
+    string stgb = b[1];
+
+    string vc = Console.ReadLine();
+    string[] c = vc.Split('-');
+    double vtc = double.Parse(c[0]);
+    string stgc = c[1];
+
+    string vd = Console.ReadLine();
+    string[] d = vd.Split('-');
+    double vtd = double.Parse(d[0]);
+    string stgd = d[1];
+
+    string ve = Console.ReadLine();
+    string[] e = ve.Split('-');
+    double vte = double.Parse(e[0]);
+
+    string vf = Console.ReadLine();
+    string[] f = vf.Split('-');
+    double vtf = double.Parse(f[0]);
+
+    double vtotais = vta + vtb + vtc + vtd + vte + vtf;
+    double pca = (vta / vtotais) * 100;
+    Console.WriteLine($"Porcentagem de votos de {stga} = {pca}%");
+    double pcb = (vtb / vtotais) * 100;
+    Console.WriteLine($"Porcentagem de votos de {stgb} = {pcb}%");
+    double pcc = (vtc / vtotais) * 100;
+    Console.WriteLine($"Porcentagem de votos de {stgc} = {pcc}%");
+    double pcd = (vtd / vtotais) * 100;
+    Console.WriteLine($"Porcentagem de votos de {stgd} = {pcd}%");
+    double pce = (vte / vtotais) * 100;
+    Console.WriteLine($"Porcentagem de votos em branco = {pce}");
+    double pcf = (vtf / vtotais) * 100;
+    Console.WriteLine($"Porcentagem de votos nulos = {pcf}");
+
+    string maior = stga;
+    if(vtb > vta) maior = stgb;
+    if(vtc > vtb) maior = stgc;
+    if(vtd > vtc) maior = stgd;
+    Console.WriteLine($"O ganhador da eleição é {maior}");
+
+  }
+}
