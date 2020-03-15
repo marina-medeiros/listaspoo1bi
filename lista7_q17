@@ -1,0 +1,15 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    Console.WriteLine ("tabela de conversão c para f");
+    int c = 10;
+    double f = 0;
+
+    while(c <= 120){
+      f = 9 * c + 160;
+      Console.WriteLine($"{c} = {f}");
+      c = c + 10;
+    }
+  }
+}
