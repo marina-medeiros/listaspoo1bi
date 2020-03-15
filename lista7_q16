@@ -1,0 +1,15 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    Console.WriteLine ("Digite um valor");
+    string a = Console.ReadLine();
+    int b = a.Length - 1;
+    while(b >= 0){
+    Console.Write(a[b]);
+    b--;
+    }
+    Console.WriteLine();
+    
+  }
+}
